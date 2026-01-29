@@ -1,0 +1,68 @@
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  footer {
+    position: static;
+  }
+
+  body {
+    padding-bottom: 20px; /* quitar el espacio extra en móvil */
+  }
+
+  /* Mantener el panel de inicio oculto por defecto en móvil; sólo mostrar si tiene la clase .open */
+  .login-panel {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    right: 0;
+    transform: none;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .22s ease, max-height .22s ease;
+  }
+
+  .login-panel.open {
+    opacity: 1;
+    pointer-events: auto;
+    max-height: 800px;
+  }
+
+  /* Ajustes header móvil */
+  .logo {
+    display: block;
+    margin: 10px auto;
+  }
+
+  header h1 {
+    display: block;
+    text-align: center;
+  }
+
+  .header-top {
+    position: static;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .header-top .brand,
+  .header-top .header-actions {
+    position: static;
+    transform: none;
+  }
+
+  .header-top .header-actions {
+    margin-top: 10px;
+  }
+
+  .btn-login {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
