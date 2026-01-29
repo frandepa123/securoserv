@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto - Securoserv</title>
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-top container">
+        <div class="brand">
+          <h1>Securoserv <img src="../img/logo.webp" alt="Logo" class="logo"></h1>
+        </div>
+        <div class="header-actions">
+          <button id="login-toggle" class="btn-login" aria-expanded="false" aria-controls="login-panel">Iniciar sesión</button>
+        </div>
+      </div>
+
+      <div class="contenedor">
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu" class="pestaña">Navegación</label>
+        <div class="contenido">
+          <nav>
+            <a href="pagina1.html">Servicios</a>
+            <a href="pagina2.html">Planes</a>
+            <a href="pagina3.html">Quienes Somos</a>
+            <a href="pagina4.html" class="active">Contacto</a>
+            <a href="../index.html">Principal</a>
+          </nav>
+        </div>
+      </div>
+
+      <div id="login-panel" class="login-panel" aria-hidden="true">
+        <form class="login-form" action="#" method="post">
+          <h3>Inicia sesión</h3>
+          <label for="user">Usuario o correo</label>
+          <input id="user" name="user" type="email" placeholder="correo@ejemplo.com" required>
+          <label for="pass">Contraseña</label>
+          <input id="pass" name="pass" type="password" placeholder="Contraseña" required>
+          <button type="submit" class="large">Entrar</button>
+          <p class="small">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero fade-in">
+        <h2>Contacto</h2>
+        <p>Estamos disponibles para consultas y cotizaciones. Complete el formulario o use los datos de contacto.</p>
+      </section>
+
+      <section class="contact slide-up">
+        <div class="section-title"><h3>Escríbanos</h3></div>
+        <form class="card contact-form" action="#" method="post">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </section>
+
+      <section class="info-contacto slide-up">
+        <div class="section-title"><h3>Horario y canales</h3></div>
+        <div class="cards">
+          <div class="card">
+            <strong>Horario de atención</strong>
+            <p>Lunes a viernes: 9:00 - 18:00</p>
+            <p>Teléfono: +54 9 11 1234 5678</p>
+          </div>
+          <div class="card">
+            <strong>Redes</strong>
+            <p><a href="https://www.facebook.com/securoserv" target="_blank" rel="noopener">Facebook</a> • <a href="https://www.instagram.com/securoserv" target="_blank" rel="noopener">Instagram</a> • <a href="https://www.linkedin.com/company/securoserv" target="_blank" rel="noopener">LinkedIn</a></p>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Securoserv. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

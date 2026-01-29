@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicios - Securoserv</title>
+    <link href="../css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-top container">
+        <div class="brand">
+          <h1>Securoserv <img src="../img/logo.webp" alt="Logo" class="logo"></h1>
+        </div>
+        <div class="header-actions">
+          <button id="login-toggle" class="btn-login" aria-expanded="false" aria-controls="login-panel">Iniciar sesión</button>
+        </div>
+      </div>
+
+      <div class="contenedor">
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu" class="pestaña">Navegación</label>
+        <div class="contenido">
+          <nav>
+            <a href="pagina1.html">Servicios</a>
+            <a href="pagina2.html">Planes</a>
+            <a href="pagina3.html">Quienes Somos</a>
+            <a href="pagina4.html" class="active">Contacto</a>
+            <a href="../index.html">Principal</a>
+          </nav>
+        </div>
+      </div>
+
+      <div id="login-panel" class="login-panel" aria-hidden="true">
+        <form class="login-form" action="#" method="post">
+          <h3>Inicia sesión</h3>
+          <label for="user">Usuario o correo</label>
+          <input id="user" name="user" type="email" placeholder="correo@ejemplo.com" required>
+          <label for="pass">Contraseña</label>
+          <input id="pass" name="pass" type="password" placeholder="Contraseña" required>
+          <button type="submit" class="large">Entrar</button>
+          <p class="small">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero fade-in">
+        <h2>Servicios</h2>
+        <p>Conozca en detalle los servicios que ofrecemos para proteger su activo más valioso: la tranquilidad.</p>
+      </section>
+
+      <section class="servicios slide-up">
+        <div class="section-title"><h3>Servicios principales</h3></div>
+        <div class="cards">
+          <article class="card">
+            <h4>Vigilancia presencial</h4>
+            <p>Guardias formados, turnos programados y controles de acceso.</p>
+          </article>
+          <article class="card">
+            <h4>Sistemas CCTV y alarmas</h4>
+            <p>Instalación, configuración y mantenimiento de equipos de seguridad electrónica.</p>
+          </article>
+          <article class="card">
+            <h4>Monitoreo y respuesta</h4>
+            <p>Centro de monitoreo 24/7 con respuesta rápida y notificaciones.</p>
+          </article>
+          <article class="card">
+            <h4>Auditoría y consultoría</h4>
+            <p>Estrategias personalizadas para reducción de riesgos y optimización de recursos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq slide-up">
+        <div class="section-title"><h3>Preguntas frecuentes</h3></div>
+        <div class="cards">
+          <article class="card">
+            <h4>¿Cómo contrato un servicio?</h4>
+            <p>Contacte por nuestro formulario o llámenos y coordinaremos una visita técnica para una cotización sin compromiso.</p>
+          </article>
+          <article class="card">
+            <h4>¿Ofrecen seguimiento 24/7?</h4>
+            <p>Sí, contamos con monitoreo 24/7 y respuesta coordinada con guardias y fuerzas de respuesta según contrato.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta fade-in">
+        <div class="section-title"><h3>Solicite una cotización</h3></div>
+        <p>Complete el formulario de contacto y uno de nuestros asesores lo contactará para evaluar su proyecto.</p>
+        <a href="pagina4.html" class="btn-primary">Pedir cotización</a>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Securoserv. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
