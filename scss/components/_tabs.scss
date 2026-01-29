@@ -1,0 +1,60 @@
+.contenedor {
+  width: 300px;
+  margin: auto;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+/* pestaña */
+.pestaña {
+  display: block;
+  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* contenido cerrado */
+.contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #fff;
+  border-radius: 0 0 6px 6px;
+  pointer-events: none; /* evitar interacción cuando está oculta */
+  z-index: 95;
+}
+
+/* contenido abierto */
+#toggle-menu:checked + .pestaña + .contenido {
+  max-height: 300px;
+  padding: 10px 0;
+  pointer-events: auto; /* permitir clicks cuando está abierto */
+}
+
+/* asegurar que los enlaces dentro sean interactivos */
+.contenido nav a {
+  pointer-events: auto;
+}
+
+/* nav interno */
+.contenido nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido nav a {
+  color: var(--accent2);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contenido nav a:hover {
+  background-color: #eee;
+}

@@ -1,0 +1,17 @@
+.float-badge {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  background: var(--accent2);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: none;
+}

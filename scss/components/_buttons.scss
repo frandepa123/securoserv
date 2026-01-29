@@ -1,0 +1,34 @@
+button {
+  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &.large {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+
+  &.secondary {
+    background: #777;
+  }
+}
+
+/* Variant: outline style for primary buttons (used on index) */
+.btn-primary.outline, .btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent2);
+  box-shadow: none;
+  border: 2px solid var(--accent2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
