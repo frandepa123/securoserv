@@ -1,0 +1,18 @@
+nav {
+  margin-top: 10px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}

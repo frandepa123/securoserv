@@ -1,0 +1,14 @@
+header {
+  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.header-top {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
