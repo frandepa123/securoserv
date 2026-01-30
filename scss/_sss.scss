@@ -378,12 +378,25 @@ input[type="submit"]:hover {
 }
 
 /* =========================
-   RESPONSIVE
+  RESPONSIVE
 ========================= */
 @media (max-width: 600px) {
   .contenedor {
     width: 100%;
     padding: 0 10px;
+  }
+
+  .contenido {
+    background-color: #fff;
+  }
+
+  .contenido nav a:hover {
+    background-color: transparent;
+  }
+
+  body {
+    overflow-x: hidden;
+    padding: 10px;
   }
 
   .logo {
@@ -477,18 +490,6 @@ input[type="submit"]:hover {
   padding: 30px;
   margin-bottom: 20px;
   text-align: center;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg,var(--accent1),var(--accent2));
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-  transition: background-position .35s ease, transform .12s ease;
-  background-size: 200% 100%;
 }
 
 .map {
