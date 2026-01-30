@@ -32,3 +32,21 @@ button {
   border-radius: 6px;
   text-decoration: none;
 }
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg,var(--accent1),var(--accent2));
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  transition: background-position .35s ease, transform .12s ease;
+  background-size: 200% 100%;
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
