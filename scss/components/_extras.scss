@@ -1,12 +1,14 @@
-.float-badge {
+.whatsapp-button {
   position: fixed;
-  left: 16px;
-  bottom: 16px;
-  background: var(--accent2);
+  right: 16px;
+  bottom: 80px;
+  background: #25d366;
   color: #fff;
   padding: 8px 12px;
   border-radius: 20px;
+  text-decoration: none;
   animation: float 3s ease-in-out infinite;
+  z-index: 1000;
 }
 
 .back-to-top {
@@ -14,4 +16,5 @@
   right: 16px;
   bottom: 16px;
   display: none;
+  z-index: 1000;
 }
