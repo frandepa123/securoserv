@@ -4,14 +4,39 @@
   gap: 20px;
 }
 
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .card {
-  background: #fff;
+  background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
   color: #111;
-  padding: 18px;
-  border-radius: 10px;
-  transition: transform .2s ease;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+  text-align: center;
 
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   }
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.summary-card h4 {
+  margin: 10px 0;
+  color: var(--primary);
+}
+
+.summary-card p {
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
