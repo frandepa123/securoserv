@@ -8,84 +8,7 @@
   --accent3: #ffd500;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding-bottom: 20px;
-  }
-  .container {
-    width: 100%;
-    padding: 0 10px;
-  }
-  footer {
-    position: static;
-  }
-  /* ===== LOGIN PANEL ===== */
-  .login-panel {
-    position: static;
-    width: 100%;
-    margin-top: 10px;
-    right: 0;
-    transform: none;
-    box-shadow: none;
-    opacity: 0;
-    pointer-events: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.22s ease, max-height 0.22s ease;
-  }
-  .login-panel.open {
-    opacity: 1;
-    pointer-events: auto;
-    max-height: 800px;
-  }
-  /* ===== HEADER ===== */
-  header h1 {
-    display: block;
-    text-align: center;
-  }
-  .logo {
-    display: block;
-    margin: 10px auto;
-  }
-  .header-top {
-    position: static;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  .header-top .brand,
-  .header-top .header-actions {
-    position: static;
-    transform: none;
-  }
-  .header-top .header-actions {
-    margin-top: 10px;
-  }
-  .btn-login {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  /* ===== CARDS ===== */
-  .summary-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  .summary-cards .card {
-    padding: 20px;
-  }
-  .summary-cards .card-icon {
-    font-size: 2.5rem;
-  }
-  /* ===== TABLE ===== */
-  table {
-    font-size: 14px;
-  }
-  table th,
-  table td {
-    padding: 8px 4px;
-  }
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -298,7 +221,6 @@ form input[required], form textarea[required] {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
-  background-color: #fff;
   border-radius: 0 0 6px 6px;
   pointer-events: none; /* evitar interacción cuando está oculta */
   z-index: 95;
@@ -308,8 +230,10 @@ form input[required], form textarea[required] {
 #toggle-menu:checked + .pestaña + .contenido {
   max-height: 300px;
   padding: 10px 0;
-  pointer-events: auto; /* permitir clicks cuando está abierto */
+  pointer-events: auto;
+  background-color: #fff;
 }
+
 
 /* asegurar que los enlaces dentro sean interactivos */
 .contenido nav a {
@@ -567,17 +491,6 @@ footer p {
   text-align: center;
 }
 
-/* contenido cerrado */
-.contenido {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background-color: #fff;
-  border-radius: 0 0 6px 6px;
-  pointer-events: none; /* evitar interacción cuando está oculta */
-  z-index: 95;
-}
-
 /* contenido abierto */
 #toggle-menu:checked + .pestaña + .contenido {
   max-height: 300px;
@@ -768,48 +681,6 @@ input[type=submit]:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-  RESPONSIVE
-========================= */
-@media (max-width: 600px) {
-  .contenedor {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .contenido {
-    background-color: #fff;
-  }
-  .contenido nav a:hover {
-    background-color: transparent;
-  }
-  body {
-    overflow-x: hidden;
-    padding: 10px;
-  }
-  .logo {
-    display: block;
-    margin: 10px auto;
-  }
-  header h1 {
-    display: block;
-    text-align: center;
-  }
-  /* En móviles apilamos el header: marca arriba y botón debajo */
-  .header-top {
-    position: static;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-  }
-  .header-top .brand,
-  .header-top .header-actions {
-    position: static;
-    transform: none;
-  }
-  .header-top .header-actions {
-    margin-top: 10px;
-  }
-}
 /* En pantallas grandes empujamos aún más el botón hacia la derecha */
 @media (min-width: 1000px) {
   .header-top {
@@ -1164,25 +1035,6 @@ header {
   color: var(--text);
 }
 
-@media (max-width: 600px) {
-  .login-panel {
-    position: static;
-    width: 100%;
-    margin-top: 10px;
-    right: 0;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    box-shadow: none;
-  }
-  .header-top {
-    padding: 0 10px;
-  }
-  .btn-login {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-}
 nav a.active:hover {
   text-decoration: none;
 }
@@ -1223,6 +1075,96 @@ ul.custom-icons li {
 
 ul.custom-icons li:hover {
   background-color: #eee;
+}
+
+@media (max-width: 600px) {
+
+  /* ===== BODY ===== */
+  body {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    padding: 8% 0;              
+    text-align: center;
+  }
+
+  .header-top,
+  .header-top .brand,
+  .header-top .header-actions {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-top {
+    display: block;
+    padding: 0 10px;
+    min-height: auto;
+    margin: auto;
+  }
+
+  header h1 {
+    font-size: 1.4rem;           
+    margin: 2px 0;
+  }
+
+  .logo {
+    width: 60px;                  
+  }
+
+  /* ===== BOTÓN LOGIN (VISIBLE EN MOBILE) ===== */
+  .header-actions {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .btn-login {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  /* ===== BOTÓN NAVEGACIÓN ===== */
+  .pestaña {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  /* ===== MENU ===== */
+  .contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: transparent;
+  }
+
+  #toggle-menu:checked + .pestaña + .contenido {
+    max-height: 300px;
+  }
+
+  .contenido nav a {
+    display: block;
+    padding: 10px;
+  }
+
+  /* ===== LOGIN PANEL ===== */
+
+  .login-panel input,
+  .login-panel button {
+    width: 100%;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    position: static;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
