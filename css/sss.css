@@ -1,3 +1,388 @@
+@charset "UTF-8";
+:root {
+  --bg-1: #051224;
+  --bg-2: #001a2e;
+  --text: #f3fbff;
+  --accent1: #00d4ff;
+  --accent2: #ff2d95;
+  --accent3: #ffd500;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  footer {
+    position: static;
+  }
+  body {
+    padding-bottom: 20px; /* quitar el espacio extra en móvil */
+  }
+  /* Mantener el panel de inicio oculto por defecto en móvil; sólo mostrar si tiene la clase .open */
+  .login-panel {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+    right: 0;
+    transform: none;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.22s ease, max-height 0.22s ease;
+  }
+  .login-panel.open {
+    opacity: 1;
+    pointer-events: auto;
+    max-height: 800px;
+  }
+  /* Ajustes header móvil */
+  .logo {
+    display: block;
+    margin: 10px auto;
+  }
+  header h1 {
+    display: block;
+    text-align: center;
+  }
+  .header-top {
+    position: static;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .header-top .brand,
+  .header-top .header-actions {
+    position: static;
+    transform: none;
+  }
+  .header-top .header-actions {
+    margin-top: 10px;
+  }
+  .btn-login {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .summary-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card-icon {
+    font-size: 2.5rem;
+  }
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 8px 4px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  padding: 20px;
+  padding-bottom: 100px; /* espacio para el footer fijo */
+}
+
+main {
+  min-height: calc(100vh - 160px); /* asegura que la página tenga suficiente largo */
+}
+
+h1, h2, h3 {
+  color: var(--accent2);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.header-top {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+footer {
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  color: #fff;
+  text-align: center;
+  padding: 14px 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+button {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+button.large {
+  padding: 15px 25px;
+  font-size: 18px;
+}
+button.secondary {
+  background: #777;
+}
+
+/* Variant: outline style for primary buttons (used on index) */
+.btn-primary.outline, .btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent2);
+  box-shadow: none;
+  border: 2px solid var(--accent2);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+  transition: background-position 0.35s ease, transform 0.12s ease;
+  background-size: 200% 100%;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+  color: #111;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.summary-card h4 {
+  margin: 10px 0;
+  color: var(--primary);
+}
+
+.summary-card p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+form {
+  margin: 20px 0;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+form input[required], form textarea[required] {
+  border: 2px solid red;
+}
+
+.contenedor {
+  width: 300px;
+  margin: auto;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+/* pestaña */
+.pestaña {
+  display: block;
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* contenido cerrado */
+.contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #fff;
+  border-radius: 0 0 6px 6px;
+  pointer-events: none; /* evitar interacción cuando está oculta */
+  z-index: 95;
+}
+
+/* contenido abierto */
+#toggle-menu:checked + .pestaña + .contenido {
+  max-height: 300px;
+  padding: 10px 0;
+  pointer-events: auto; /* permitir clicks cuando está abierto */
+}
+
+/* asegurar que los enlaces dentro sean interactivos */
+.contenido nav a {
+  pointer-events: auto;
+}
+
+/* nav interno */
+.contenido nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido nav a {
+  color: var(--accent2);
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contenido nav a:hover {
+  background-color: #eee;
+}
+
+.login-panel {
+  position: absolute;
+  right: 12px;
+  top: 100%;
+  width: 320px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login-panel.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.whatsapp-button {
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  background: #25d366;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  animation: float 3s ease-in-out infinite;
+  z-index: 1000;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: none;
+  z-index: 1000;
+}
+
+.hero {
+  padding: 30px;
+  text-align: center;
+}
+
+.contact {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.faq {
+  margin-bottom: 120px;
+}
+
 /* =========================
    RESET
 ========================= */
@@ -22,9 +407,10 @@
   --card-bg: #ffffff;
   --glass: rgba(255,255,255,0.04);
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
   color: var(--text);
   padding: 20px;
 }
@@ -33,13 +419,13 @@ body {
    HEADER
 ========================= */
 header {
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
   padding: 20px 0;
   /* keep text-align center for smaller screens */
   text-align: center;
   position: relative; /* necesario para posicionar el panel de inicio de sesión */
-} 
+}
 
 /* Contenedor superior del header: marca y acciones */
 .header-top {
@@ -74,7 +460,7 @@ header {
 .btn-login {
   position: relative;
   z-index: 100;
-} 
+}
 
 /* Evitar que el h1 ocupe espacios extra */
 header h1 {
@@ -82,7 +468,7 @@ header h1 {
   display: inline-block;
   vertical-align: middle;
   color: #ffffff;
-} 
+}
 
 /* =========================
    LOGO
@@ -140,7 +526,7 @@ section p {
    FOOTER
 ========================= */
 footer {
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
   text-align: center;
   padding: 10px 0;
@@ -169,7 +555,7 @@ footer p {
 /* pestaña */
 .pestaña {
   display: block;
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: #fff;
   padding: 15px;
   cursor: pointer;
@@ -246,21 +632,21 @@ a:hover {
 }
 
 button {
-  background-image: linear-gradient(90deg,var(--accent1) 0%,var(--accent2) 100%);
+  background-image: linear-gradient(90deg, var(--accent1) 0%, var(--accent2) 100%);
   background-size: 200% 100%;
   color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 6px;
-  transition: background-position .35s ease, transform .12s ease, box-shadow .15s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: background-position 0.35s ease, transform 0.12s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 button:hover {
   background-position: 100% 0;
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================
@@ -296,7 +682,7 @@ table {
 
 /* Bordes sutiles para contraste en fondo oscuro */
 table, th, td {
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 th, td {
@@ -307,26 +693,27 @@ th, td {
 }
 
 th {
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
+  background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: #fff;
 }
 
 tr:nth-child(even) {
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 /* Estilos específicos para la sección comparativa (Planes) */
 .comparativa table {
-  background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(255,45,149,0.04));
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.04));
   border-radius: 8px;
   overflow: hidden;
 }
 
 .comparativa table tr:nth-child(even) {
-  background-color: rgba(255,255,255,0.02);
+  background-color: rgba(255, 255, 255, 0.02);
 }
+
 .comparativa table tr:hover {
-  background-color: rgba(255,255,255,0.04);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 /* Wrapper para manejo responsivo de tablas */
@@ -334,6 +721,7 @@ tr:nth-child(even) {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .table-wrapper table {
   min-width: 600px; /* permite scroll en pantallas pequeñas */
 }
@@ -351,8 +739,8 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
+input[type=text],
+input[type=email],
 textarea {
   width: 100%;
   padding: 8px;
@@ -361,41 +749,48 @@ textarea {
   border-radius: 4px;
 }
 
-input[type="submit"] {
-  background-image: linear-gradient(90deg,var(--accent1),var(--accent2));
+input[type=submit] {
+  background-image: linear-gradient(90deg, var(--accent1), var(--accent2));
   color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 6px;
-  transition: background-position .35s ease, transform .12s ease;
+  transition: background-position 0.35s ease, transform 0.12s ease;
   background-size: 200% 100%;
 }
 
-input[type="submit"]:hover {
+input[type=submit]:hover {
   background-position: 100% 0;
   transform: translateY(-2px);
 }
 
 /* =========================
-   RESPONSIVE
+  RESPONSIVE
 ========================= */
 @media (max-width: 600px) {
   .contenedor {
     width: 100%;
     padding: 0 10px;
   }
-
+  .pestaña {
+    border: 1px solid var(--accent1);
+  }
+  .contenido {
+    background-color: transparent;
+  }
+  body {
+    overflow-x: hidden;
+    padding: 10px;
+  }
   .logo {
     display: block;
     margin: 10px auto;
   }
-
   header h1 {
     display: block;
     text-align: center;
   }
-
   /* En móviles apilamos el header: marca arriba y botón debajo */
   .header-top {
     position: static;
@@ -403,18 +798,15 @@ input[type="submit"]:hover {
     padding: 0;
     text-align: center;
   }
-
   .header-top .brand,
   .header-top .header-actions {
     position: static;
     transform: none;
   }
-
   .header-top .header-actions {
     margin-top: 10px;
   }
 }
-
 /* En pantallas grandes empujamos aún más el botón hacia la derecha */
 @media (min-width: 1000px) {
   .header-top {
@@ -431,7 +823,6 @@ input[type="submit"]:hover {
 /* =========================
    NUEVOS ESTILOS
 ========================= */
-
 /* =========================
    ANIMACIONES Y COMPONENTES
 ========================= */
@@ -448,53 +839,45 @@ input[type="submit"]:hover {
   color: #111; /* texto negro dentro de tarjetas */
   border-radius: 10px;
   padding: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transform: translateY(6px);
-  transition: transform .3s ease, box-shadow .3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card h1, .card h2, .card h3, .card h4, .card p, .card span, .card strong, .card a, .card label {
   color: #111;
 }
+
 .card input, .card textarea {
   color: #111;
   background: #fff;
   border: 1px solid #ddd;
 }
+
 /* Centrar formularios dentro de la sección de contacto */
 .contact .card, .contact-form {
   max-width: 600px;
   margin: 0 auto;
   display: block;
 }
+
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 .hero {
-  background: linear-gradient(90deg, rgba(0,212,255,0.06), rgba(255,45,149,0.02));
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.06), rgba(255, 45, 149, 0.02));
   border-radius: 10px;
   padding: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg,var(--accent1),var(--accent2));
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
-  transition: background-position .35s ease, transform .12s ease;
-  background-size: 200% 100%;
-}
-
 .map {
   width: 100%;
   height: 250px;
-  background: linear-gradient(180deg,#e9e9e9,#fff);
+  background: linear-gradient(180deg, #e9e9e9, #fff);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -510,30 +893,48 @@ input[type="submit"]:hover {
 
 /* Animaciones */
 .fade-in {
-  animation: fadeIn .6s ease both;
+  animation: fadeIn 0.6s ease both;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 .slide-up {
-  animation: slideUp .5s cubic-bezier(.2,.8,.2,1) both;
+  animation: slideUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
 .pulse {
-  animation: pulse .9s ease-in-out infinite;
-}
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
+  animation: pulse 0.9s ease-in-out infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* Pequeños ajustes para los headings en secciones */
 .section-title {
   display: flex;
@@ -541,6 +942,7 @@ input[type="submit"]:hover {
   gap: 12px;
   margin-bottom: 12px;
 }
+
 .section-title h3 {
   color: var(--text); /* texto claro */
 }
@@ -552,6 +954,7 @@ input[type="submit"]:hover {
   border-left: 5px solid #ffb300;
   margin-bottom: 20px;
 }
+
 /* Estilo para citas */
 blockquote {
   border-left: 4px solid var(--accent2); /* vivid accent */
@@ -560,42 +963,52 @@ blockquote {
   color: var(--text);
   font-style: italic;
 }
+
 /* Estilo para botones secundarios */
 button.secondary {
   background-color: #777;
 }
+
 button.secondary:hover {
   background-color: #555;
 }
+
 /* Estilo para enlaces visitados */
 a:visited {
   color: var(--text);
 }
+
 a:visited:hover {
   text-decoration: underline;
 }
+
 /* Estilo para listas numeradas */
 ol {
   list-style-type: decimal;
   margin-left: 20px;
 }
+
 ol li {
   margin-bottom: 5px;
 }
+
 /* Estilo para resaltar código */
 code {
   background-color: #f4f4f4;
   padding: 2px 4px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   border-radius: 4px;
 }
+
 /* Estilo para tablas con filas resaltadas */
 table tr.highlight {
   background-color: #ffff99;
 }
+
 table tr.highlight:hover {
   background-color: #ffeb3b;
 }
+
 /* Estilo para formularios con campos requeridos */
 input[required],
 textarea[required] {
@@ -606,18 +1019,21 @@ input[required]:focus,
 textarea[required]:focus {
   border-color: #cc0000;
 }
+
 /* Estilo para mensajes de error */
 .error-message {
   color: #ff0000;
   font-weight: bold;
   margin-top: 5px;
 }
+
 /* Estilo para mensajes de éxito */
 .success-message {
   color: #008000;
   font-weight: bold;
   margin-top: 5px;
 }
+
 /* Estilo para secciones destacadas */
 .highlight-section {
   background-color: #e0f7fa;
@@ -625,15 +1041,18 @@ textarea[required]:focus {
   border-radius: 6px;
   margin-bottom: 20px;
 }
+
 /* Estilo para botones grandes */
 button.large {
   padding: 15px 25px;
   font-size: 18px;
 }
+
 button.large:hover {
   background-position: 100% 0;
   transform: translateY(-2px);
 }
+
 /* Estilo para enlaces de navegación activos */
 nav a.active {
   font-weight: bold;
@@ -663,7 +1082,7 @@ header {
 }
 
 .btn-login {
-  background: linear-gradient(135deg,var(--accent2),var(--accent1));
+  background: linear-gradient(135deg, var(--accent2), var(--accent1));
   background-size: 200% 100%;
   color: #fff;
   padding: 10px 16px;
@@ -671,18 +1090,18 @@ header {
   border: 0;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.28);
-  transition: transform .15s ease, box-shadow .15s ease, background-position .25s ease;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.25s ease;
 }
 
 .btn-login:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.32);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.32);
   background-position: 100% 0;
 }
 
 .btn-login:active {
-  transform: translateY(0) scale(.99);
+  transform: translateY(0) scale(0.99);
 }
 
 .login-panel {
@@ -690,17 +1109,17 @@ header {
   top: calc(100% + 8px);
   right: 12px; /* alineado con el botón dentro del contenedor */
   width: 320px;
-  background: linear-gradient(180deg,#ffffff,#fbfbfb);
+  background: linear-gradient(180deg, #ffffff, #fbfbfb);
   border-radius: 10px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   padding: 18px;
   opacity: 0;
-  transform: translateY(-10px) scale(.98);
+  transform: translateY(-10px) scale(0.98);
   transform-origin: top right;
-  transition: opacity .22s ease, transform .22s ease, visibility .22s;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
   pointer-events: none;
   z-index: 80;
-}  
+}
 
 /* Panel abierto */
 .login-panel.open {
@@ -728,17 +1147,17 @@ header {
   border: 1px solid #ddd;
   border-radius: 6px;
   outline: none;
-  transition: box-shadow .12s ease, border-color .12s;
+  transition: box-shadow 0.12s ease, border-color 0.12s;
 }
 
 .login-form input:focus {
   border-color: var(--accent2);
-  box-shadow: 0 6px 18px rgba(255,45,149,0.08);
+  box-shadow: 0 6px 18px rgba(255, 45, 149, 0.08);
 }
 
 .login-form .small {
   margin-top: 10px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--text);
 }
 
@@ -753,11 +1172,9 @@ header {
     pointer-events: auto;
     box-shadow: none;
   }
-
   .header-top {
     padding: 0 10px;
   }
-
   .btn-login {
     font-size: 14px;
     padding: 8px 12px;
@@ -766,146 +1183,43 @@ header {
 nav a.active:hover {
   text-decoration: none;
 }
+
 /* Estilo para imágenes con borde */
 img.bordered {
   border: 4px solid var(--accent2);
   border-radius: 8px;
 }
+
 img.bordered:hover {
   border-color: var(--accent1);
 }
+
 /* Estilo para formularios con fondo */
 form.styled-form {
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 6px;
 }
-form.styled-form input[type="text"],
-form.styled-form input[type="email"],
+
+form.styled-form input[type=text],
+form.styled-form input[type=email],
 form.styled-form textarea {
   border: 1px solid var(--accent2);
 }
-form.styled-form input[type="text"]:focus,
-form.styled-form input[type="email"]:focus,
+
+form.styled-form input[type=text]:focus,
+form.styled-form input[type=email]:focus,
 form.styled-form textarea:focus {
   border-color: var(--accent2);
 }
+
 /* Estilo para listas con iconos personalizados */
 ul.custom-icons li {
-    list-style-image: url('img/custom-icon.png');
-    }
+  list-style-image: url("img/custom-icon.png");
+}
+
 ul.custom-icons li:hover {
-    background-color: #eee;
-    }
-
-/* Evitar que la sección FAQ toque el footer */
-.faq {
-  margin-bottom: 120px;
-}
-@media (max-width: 600px) {
-  .faq {
-    margin-bottom: 80px;
-  }
+  background-color: #eee;
 }
 
-/* Añadir padding inferior general para evitar solapamiento con el footer fijo */
-main {
-  padding-bottom: 80px;
-}
-
-/* Asegurar que el botón dentro de la tarjeta de contacto no 'rompa' el layout */
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-}
-.contact-card a.btn-primary {
-  width: auto !important;
-  display: inline-block;
-  align-self: flex-start;
-}
-@media (max-width: 600px) {
-  .contact-card {
-    align-items: center;
-    text-align: center;
-  }
-  .contact-card a.btn-primary {
-    align-self: center;
-  }
-}
-
-/* Boludeces: badge flotante + botón volver arriba */
-.float-badge {
-  position: fixed;
-  left: 16px;
-  bottom: 16px;
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  cursor: pointer;
-  animation: float 3s ease-in-out infinite;
-  z-index: 200;
-}
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-.back-to-top {
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  background: var(--accent3);
-  color: #111;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  display: none;
-  z-index: 200;
-}
-.back-to-top.show { display: block; }
-
-.float-badge:focus, .back-to-top:focus { outline: 3px solid rgba(255,255,255,0.12); outline-offset: 2px; }
-/* Estilo para citas destacadas */
-blockquote.highlighted {
-  background-color: #fff3e0;
-  padding: 10px;
-  border-left: 6px solid #ff9800;
-}
-blockquote.highlighted:hover {
-  background-color: #ffe0b2;
-}
-/* Estilo para tablas con encabezados fijos */
-table.fixed-header thead {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(90deg,var(--accent2),var(--accent1));
-  color: #fff;
-}
-table.fixed-header thead th {
-  padding: 10px;
-}
-table.fixed-header tbody tr:hover {
-  background-color: #f1f1f1;
-}
-/* Estilo para formularios con validación en tiempo real */
-input.valid,
-textarea.valid {
-  border-color: #008000;
-}
-input.invalid,
-textarea.invalid {
-  border-color: #ff0000;
-}
-input.valid:focus,
-textarea.valid:focus {
-  border-color: #006400;
-}
-input.invalid:focus,
-textarea.invalid:focus {
-  border-color: #cc0000;
-}
+/*# sourceMappingURL=main.css.map */
