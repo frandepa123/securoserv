@@ -1,60 +1,54 @@
-@media (max-width: 600px) {
+/* =========================
+   MIXINS RESPONSIVE
+========================= */
 
-  html,
-  body {
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: #000; 
+@mixin mobile-only {
+  @media (max-width: 599px) {
+    @content;
   }
+}
 
-  body {
-    padding-bottom: 0; 
+@mixin tablet-up {
+  @media (min-width: 600px) {
+    @content;
   }
+}
 
-  .container {
-    width: 100%;
-    padding: 0 10px;
+@mixin tablet-only {
+  @media (min-width: 600px) and (max-width: 999px) {
+    @content;
   }
+}
 
-  footer {
-    position: static;
-    width: 100%;
+@mixin desktop-up {
+  @media (min-width: 1000px) {
+    @content;
   }
+}
 
-  /* ===== LOGIN PANEL ===== */
-  .login-panel {
-    position: static;
-    width: 100%;
-    margin-top: 10px;
-    right: 0;
-    transform: none;
-    box-shadow: none;
-
-    opacity: 0;
-    pointer-events: none;
-    max-height: 0;
-    overflow: hidden;
-
-    transition: opacity 0.22s ease, max-height 0.22s ease;
-
-    &.open {
-      opacity: 1;
-      pointer-events: auto;
-      max-height: 800px;
-    }
+@mixin desktop-only {
+  @media (min-width: 1000px) and (max-width: 1199px) {
+    @content;
   }
+}
 
-  /* ===== HEADER ===== */
-  header {
-    width: 100%;
-    overflow: hidden;
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* =========================
+   MEDIA QUERIES GLOBALES
+========================= */
+
+/* MOBILE - Pantallas pequeñas (hasta 599px) */
 
     h1 {
       display: block;
       text-align: center;
     }
-  }
+  
 
   .logo {
     display: block;
@@ -83,7 +77,6 @@
     padding: 8px 12px;
   }
 
-  /* ===== CARDS ===== */
   .summary-cards {
     flex-direction: column;
     align-items: center;
@@ -100,7 +93,6 @@
     }
   }
 
-  /* ===== TABLE ===== */
   .table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -117,4 +109,118 @@
       white-space: nowrap;
     }
   }
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .summary-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      margin: 10px;
+    }
+  }
+
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    font-size: 15px;
+
+    th,
+    td {
+      padding: 10px 8px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  /* ===== LOGIN PANEL ===== */
+  .login-panel {
+    position: static;
+    width: 100%;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    width: 100%;
+    overflow: hidden;
+    h1 {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .logo {
+    display: block;
+    margin: 10px auto;
+  }
+  .header-top {
+    position: static;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    .brand,
+    .header-actions {
+      position: static;
+      transform: none;
+    }
+    .header-actions {
+      margin-top: 10px;
+    }
+  }
+  .btn-login {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* ===== CARDS ===== */
+
+  .summary-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    .card {
+      width: 100%;
+      max-width: 360px;
+      padding: 20px;
+      &-icon {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  /* ===== TABLE ===== */
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+    th,
+    td {
+      padding: 8px 4px;
+      white-space: nowrap;
+    }
+  }
+  /* ===== NAVEGADOR ===== */
+  .navegador {
+    font-size: 14px;
+    padding: 8px 12px;
+    
+  }
+
 }
