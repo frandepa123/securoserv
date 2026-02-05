@@ -1,8 +1,86 @@
+/* =========================
+   VARIABLES DE COLOR
+========================= */
 :root {
+  /* Fondos */
   --bg-1: #051224;
   --bg-2: #001a2e;
+
+  /* Texto */
   --text: #f3fbff;
-  --accent1: #00d4ff;
-  --accent2: #ff2d95;
-  --accent3: #ffd500;
+  --muted: #f0f4f8;
+
+  /* Acentos principales */
+  --accent1: #00d4ff;     /* cyan eléctrico */
+  --accent2: #ff2d95;     /* magenta vivido */
+  --accent3: #ffd500;     /* amarillo vibrante */
+
+  /* Estados */
+  --danger: #ff4d4f;
+
+  /* Componentes */
+  --card-bg: #ffffff;
+  --glass: rgba(255, 255, 255, 0.04);
 }
+
+/* =========================
+   VARIABLES DE TIPOGRAFÍA
+========================= */
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-family-mono: "Courier New", Courier, monospace;
+
+$line-height-base: 1.6;
+$line-height-tight: 1.5;
+
+/* =========================
+   VARIABLES DE ESPACIADO
+========================= */
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 10px;
+$spacing-lg: 15px;
+$spacing-xl: 20px;
+$spacing-2xl: 24px;
+$spacing-3xl: 30px;
+
+/* =========================
+   VARIABLES DE BORDES Y ESQUINAS
+========================= */
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+$border-radius-xl: 10px;
+$border-radius-2xl: 15px;
+
+/* =========================
+   VARIABLES DE SOMBRAS
+========================= */
+$shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 6px 18px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.18);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.25);
+$shadow-2xl: 0 6px 28px rgba(0, 0, 0, 0.28);
+
+/* =========================
+   VARIABLES DE TRANSICIONES
+========================= */
+$transition-fast: 0.12s ease;
+$transition-base: 0.22s ease;
+$transition-slow: 0.35s ease;
+
+/* =========================
+   VARIABLES DE TAMAÑOS
+========================= */
+$container-width: 80%;
+$header-height: 70px;
+$footer-height: auto;
+$logo-size: 70px;
+$logo-size-mobile: 60px;
+
+/* =========================
+   BREAKPOINTS RESPONSIVE
+========================= */
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1000px;
+$breakpoint-lg: 1200px;
