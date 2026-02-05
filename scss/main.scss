@@ -1,14 +1,26 @@
+/* =========================
+   CONFIGURACIÓN Y UTILIDADES
+========================= */
 @use "utilities/variables";
 @use "utilities/responsive";
 
+/* =========================
+   ESTILOS BASE Y RESET
+========================= */
 @use "base/reset";
 @use "base/base";
 
+/* =========================
+   LAYOUT (Estructura principal)
+========================= */
 @use "layout/header";
 @use "layout/nav";
 @use "layout/container";
 @use "layout/footer";
 
+/* =========================
+   COMPONENTES REUTILIZABLES
+========================= */
 @use "components/buttons";
 @use "components/cards";
 @use "components/forms";
@@ -16,9 +28,16 @@
 @use "components/login-panel";
 @use "components/extras";
 
+/* =========================
+   ESTILOS ESPECÍFICOS DE PÁGINAS
+========================= */
 @use "pages/home";
 @use "pages/contact";
 @use "pages/faq";
+@use "pages/partners";
 
+/* =========================
+   ESTILOS ADICIONALES
+========================= */
 @use "sss";
 
