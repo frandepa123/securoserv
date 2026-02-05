@@ -1,120 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quienes Somos - Securoserv</title>
-    <link href="../css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="header-top container">
-        <div class="brand">
-          <h1>Securoserv <img src="../img/logo.webp" alt="Logo" class="logo"></h1>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conoce más sobre Securoserv, nuestro equipo, misión y valores. Descubre por qué somos líderes en soluciones de seguridad integral.">
+  <meta name="keywords" content="Seguridad, Vigilancia, Sistemas Electrónicos, Consultoría, Protección, Servicios de Seguridad, Seguridad Empresarial, Seguridad Residencial">
+  <meta name="author" content="Francesco Depaolini">
+  <title>Quienes Somos - Securoserv</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-top container">
+      <div class="brand">
+        <h1>Securoserv <img src="../img/logo.webp" alt="Logo" class="logo"></h1>
+      </div>
+      <div class="header-actions">
+        <button id="login-toggle" class="btn-login" aria-expanded="false" aria-controls="login-panel">Iniciar
+          sesión</button>
+      </div>
+    </div>
+
+    <div class="contenedor">
+      <input type="checkbox" id="toggle-menu">
+      <label for="toggle-menu" class="pestaña">Navegación</label>
+      <div class="contenido">
+        <nav>
+          <a href="pagina1.html">Servicios</a>
+          <a href="pagina2.html">Planes</a>
+          <a href="pagina3.html" class="active">Quienes Somos</a>
+          <a href="pagina5.html">Con Quién Trabajamos</a>
+          <a href="pagina4.html">Contacto</a>
+          <a href="../index.html">Principal</a>
+        </nav>
+      </div>
+    </div>
+
+    <div id="login-panel" class="login-panel" aria-hidden="true">
+      <form class="login-form" action="#" method="post">
+        <h3>Inicia sesión</h3>
+        <label for="user">Usuario o correo</label>
+        <input id="user" name="user" type="email" placeholder="correo@ejemplo.com" required>
+        <label for="pass">Contraseña</label>
+        <input id="pass" name="pass" type="password" placeholder="Contraseña" required>
+        <button type="submit" class="large">Entrar</button>
+        <p class="small">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero fade-in">
+      <h2>Sobre nosotros</h2>
+      <p>Somos un equipo multidisciplinario enfocado en seguridad integral y tecnología aplicada para maximizar la
+        protección de empresas y hogares.</p>
+    </section>
+
+    <section class="about slide-up">
+      <div class="section-title">
+        <h3>Nuestra misión</h3>
+      </div>
+      <p>Brindar servicios de seguridad confiables y accesibles, basados en la innovación y la responsabilidad con
+        nuestros clientes.</p>
+      <div style="margin-top:20px" class="cards">
+        <div class="card">
+          <h4>Visión</h4>
+          <p>Ser referentes en soluciones de seguridad a nivel regional.</p>
         </div>
-        <div class="header-actions">
-          <button id="login-toggle" class="btn-login" aria-expanded="false" aria-controls="login-panel">Iniciar sesión</button>
+        <div class="card">
+          <h4>Valores</h4>
+          <p>Compromiso, confianza y transparencia.</p>
         </div>
       </div>
+    </section>
 
-      <div class="contenedor">
-        <input type="checkbox" id="toggle-menu">
-        <label for="toggle-menu" class="pestaña">Navegación</label>
-        <div class="contenido">
-          <nav>
-            <a href="pagina1.html">Servicios</a>
-            <a href="pagina2.html">Planes</a>
-            <a href="pagina3.html">Quienes Somos</a>
-            <a href="pagina4.html" class="active">Contacto</a>
-            <a href="../index.html">Principal</a>
-          </nav>
+    <section class="equipo slide-up">
+      <div class="section-title">
+        <h3>Nuestro equipo</h3>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h4>María López — CEO</h4>
+          <p>Con amplia experiencia en operaciones y gestión de equipos de seguridad.</p>
+        </div>
+        <div class="card">
+          <h4>Carlos Gómez — CTO</h4>
+          <p>Responsable de las soluciones tecnológicas y de monitoreo.</p>
+        </div>
+        <div class="card">
+          <h4>Ana Rodríguez — Gerente de Operaciones</h4>
+          <p>Coordina los equipos de campo y asegura la calidad del servicio.</p>
+        </div>
+        <div class="card">
+          <h4>Juan Pérez — Especialista en Seguridad</h4>
+          <p>Experto en auditorías y consultoría de riesgos.</p>
         </div>
       </div>
+    </section>
 
-      <div id="login-panel" class="login-panel" aria-hidden="true">
-        <form class="login-form" action="#" method="post">
-          <h3>Inicia sesión</h3>
-          <label for="user">Usuario o correo</label>
-          <input id="user" name="user" type="email" placeholder="correo@ejemplo.com" required>
-          <label for="pass">Contraseña</label>
-          <input id="pass" name="pass" type="password" placeholder="Contraseña" required>
-          <button type="submit" class="large">Entrar</button>
-          <p class="small">¿No tienes cuenta? <a href="#">Regístrate</a></p>
-        </form>
+    <section class="valores slide-up">
+      <div class="section-title">
+        <h3>Por qué elegirnos</h3>
       </div>
-    </header>
-
-    <main>
-      <section class="hero fade-in">
-        <h2>Sobre nosotros</h2>
-        <p>Somos un equipo multidisciplinario enfocado en seguridad integral y tecnología aplicada para maximizar la protección de empresas y hogares.</p>
-      </section>
-
-      <section class="about slide-up">
-        <div class="section-title"><h3>Nuestra misión</h3></div>
-        <p>Brindar servicios de seguridad confiables y accesibles, basados en la innovación y la responsabilidad con nuestros clientes.</p>
-        <div style="margin-top:20px" class="cards">
-          <div class="card">
-            <h4>Visión</h4>
-            <p>Ser referentes en soluciones de seguridad a nivel regional.</p>
-          </div>
-          <div class="card">
-            <h4>Valores</h4>
-            <p>Compromiso, confianza y transparencia.</p>
-          </div>
+      <p>Combinamos tecnología, procesos y personal calificado para entregar soluciones medibles y confiables.</p>
+      <div class="cards">
+        <div class="card">
+          <h4>Experiencia</h4>
+          <p>Más de 10 años en el sector de la seguridad.</p>
         </div>
-      </section>
-
-      <section class="equipo slide-up">
-        <div class="section-title"><h3>Nuestro equipo</h3></div>
-        <div class="cards">
-          <div class="card">
-            <h4>María López — CEO</h4>
-            <p>Con amplia experiencia en operaciones y gestión de equipos de seguridad.</p>
-          </div>
-          <div class="card">
-            <h4>Carlos Gómez — CTO</h4>
-            <p>Responsable de las soluciones tecnológicas y de monitoreo.</p>
-          </div>
-          <div class="card">
-            <h4>Ana Rodríguez — Gerente de Operaciones</h4>
-            <p>Coordina los equipos de campo y asegura la calidad del servicio.</p>
-          </div>
-          <div class="card">
-            <h4>Juan Pérez — Especialista en Seguridad</h4>
-            <p>Experto en auditorías y consultoría de riesgos.</p>
-          </div>
+        <div class="card">
+          <h4>Innovación</h4>
+          <p>Utilizamos las últimas tecnologías para proteger a nuestros clientes.</p>
         </div>
-      </section>
-
-      <section class="valores slide-up">
-        <div class="section-title"><h3>Por qué elegirnos</h3></div>
-        <p>Combinamos tecnología, procesos y personal calificado para entregar soluciones medibles y confiables.</p>
-        <div class="cards">
-          <div class="card">
-            <h4>Experiencia</h4>
-            <p>Más de 10 años en el sector de la seguridad.</p>
-          </div>
-          <div class="card">
-            <h4>Innovación</h4>
-            <p>Utilizamos las últimas tecnologías para proteger a nuestros clientes.</p>
-          </div>
-          <div class="card">
-            <h4>Compromiso</h4>
-            <p>Estamos dedicados a la satisfacción y seguridad de nuestros clientes.</p>
-          </div>
+        <div class="card">
+          <h4>Compromiso</h4>
+          <p>Estamos dedicados a la satisfacción y seguridad de nuestros clientes.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
+  </main>
 
-    <footer>
-      <p>&copy; 2024 Securoserv. Todos los derechos reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Securoserv. Todos los derechos reservados.</p>
+  </footer>
 
-    <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">📱 WhatsApp</a>
-    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+  <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">📱
+    WhatsApp</a>
+  <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
 
-    <script src="../js/main.js"></script>
-  </body>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
