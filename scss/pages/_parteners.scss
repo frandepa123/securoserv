@@ -1,1 +1,503 @@
+// Partners Page Styles - Premium Design
+@use "../utilities/variables" as *;
+@use "../utilities/responsive" as *;
+
+// Animaciones sutiles
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+  }
+}
+
+// SECCIÓN INTRO
+.partners-intro {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(255, 45, 149, 0.03) 100%);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  
+  .section-title h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text {
+    max-width: 750px;
+    margin: 1.5rem auto 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--muted);
+    animation: slideUp 0.6s ease-out;
+  }
+}
+
+// GRID DE PARTNERS TECNOLÓGICOS
+.partners-grid {
+  padding: 3.5rem 1rem;
+  background: linear-gradient(to bottom, rgba(0, 212, 255, 0.02) 0%, transparent 100%);
+  
+  .section-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border-radius: 2px;
+    }
+  }
+  
+  .partners-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+    
+    @include responsive.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include responsive.mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.partner-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(0, 212, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  
+  // Fondo decorativo
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  &:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: var(--accent1);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 45, 149, 0.05) 100%);
+    
+    .partner-icon {
+      animation: float 2s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.4));
+    }
+  }
+  
+  .partner-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    transition: all 0.4s ease;
+    z-index: 1;
+    position: relative;
+  }
+  
+  h4 {
+    margin: 0.8rem 0 0.5rem;
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+  }
+  
+  p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0.6rem 0 1.2rem;
+    line-height: 1.5;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .partner-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    color: #051224;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  }
+}
+
+// SECCIÓN EMPRESAS
+.partners-enterprise {
+  padding: 3.5rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, rgba(255, 45, 149, 0.02) 100%);
+  border-top: 1px solid rgba(0, 212, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  
+  .section-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border-radius: 2px;
+    }
+  }
+  
+  .intro-text {
+    text-align: center;
+    max-width: 750px;
+    margin: 2rem auto 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}
+
+.enterprise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+  
+  @include responsive.tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include responsive.mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.enterprise-item {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 212, 255, 0.02) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-left: 4px solid var(--accent1);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  
+  // Efecto de fondo
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  &:hover {
+    box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+    transform: translateY(-8px);
+    border-left-color: var(--accent2);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(255, 45, 149, 0.04) 100%);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  h5 {
+    margin: 0 0 0.8rem;
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// SECCIÓN BENEFICIOS
+.benefits {
+  padding: 3.5rem 1rem;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 212, 255, 0.02) 100%);
+  
+  .section-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border-radius: 2px;
+    }
+  }
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  
+  @include responsive.tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include responsive.mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(255, 45, 149, 0.04) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  
+  // Decoración de fondo
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 213, 0, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  &:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent1);
+    box-shadow: 0 15px 50px rgba(0, 212, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.12) 0%, rgba(255, 45, 149, 0.06) 100%);
+    
+    .benefit-icon {
+      transform: scale(1.2) rotate(10deg);
+    }
+  }
+  
+  .benefit-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent1);
+    display: block;
+    transition: all 0.4s ease;
+    z-index: 1;
+    position: relative;
+  }
+  
+  h4 {
+    margin: 0.8rem 0;
+    color: var(--text);
+    font-size: 1.15rem;
+    font-weight: 700;
+    z-index: 1;
+    position: relative;
+  }
+  
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+// CTA FINAL
+.cta {
+  padding: 3.5rem 1rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(255, 45, 149, 0.05) 100%);
+  border-top: 2px solid rgba(0, 212, 255, 0.2);
+  text-align: center;
+  
+  .section-title h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .partners-intro {
+    padding: 2.5rem 1rem;
+    
+    .section-title h3 {
+      font-size: 1.8rem;
+    }
+    
+    .intro-text {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .partner-card {
+    padding: 1.8rem 1.5rem;
+    
+    .partner-icon {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .enterprise-item {
+    padding: 1.5rem;
+    
+    h5 {
+      font-size: 1rem;
+    }
+  }
+  
+  .benefits {
+    padding: 2.5rem 1rem;
+  }
+  
+  .benefit-item {
+    padding: 1.8rem 1.5rem;
+    
+    .benefit-icon {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  .cta {
+    padding: 2.5rem 1rem;
+    
+    .section-title h3 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-grid .partners-container {
+    gap: 1.5rem;
+  }
+  
+  .partner-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  
+  .enterprise-grid {
+    gap: 1.2rem;
+  }
+  
+  .benefits-grid {
+    gap: 1.5rem;
+  }
+}
 
