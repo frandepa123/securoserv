@@ -7,11 +7,11 @@ body {
   background: linear-gradient(135deg,var(--bg-1),var(--bg-2));
   color: var(--text);
   padding: 20px;
-  padding-bottom: 100px; /* espacio para el footer fijo */
+  padding-bottom: 100px; 
 }
 
 main {
-  min-height: calc(100vh - 160px); /* asegura que la página tenga suficiente largo */
+  min-height: calc(100vh - 160px); 
 } 
 
 h1, h2, h3 {
@@ -27,3 +27,4 @@ img {
   max-width: 100%;
   display: block;
 }
+
