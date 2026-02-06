@@ -1,4 +1,3 @@
-// Manejo mínimo del desplegable de inicio de sesión
 const loginToggle = document.getElementById('login-toggle');
 const loginPanel = document.getElementById('login-panel');
 
@@ -10,7 +9,6 @@ if (loginToggle && loginPanel) {
     loginToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  // Cerrar al hacer clic fuera
   document.addEventListener('click', function (e) {
     if (!loginPanel.contains(e.target) && e.target !== loginToggle && loginPanel.classList.contains('open')) {
       loginPanel.classList.remove('open');
@@ -19,7 +17,6 @@ if (loginToggle && loginPanel) {
     }
   });
 
-  // Cerrar con Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && loginPanel.classList.contains('open')) {
       loginPanel.classList.remove('open');
@@ -30,20 +27,16 @@ if (loginToggle && loginPanel) {
   });
 }
 
-// Forzar navegación desde el menú desplegable en caso de que algún elemento superior bloquee el click
 document.querySelectorAll('.contenido nav a').forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     var href = this.getAttribute('href');
-    // cerrar el menú si existe
     var toggle = document.getElementById('toggle-menu');
     if (toggle) toggle.checked = false;
-    // navegar
     window.location.href = href;
   });
 });
 
-// Badge flotante y botón 'volver arriba'
 const floatBadge = document.getElementById('float-badge');
 const backTop = document.getElementById('back-to-top');
 
@@ -64,7 +57,6 @@ if (backTop) {
   });
 }
 
-// Validación de formularios
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', function (e) {
     const inputs = this.querySelectorAll('input[required], textarea[required]');
@@ -85,7 +77,6 @@ document.querySelectorAll('form').forEach(form => {
     }
   });
 
-  // Limpiar error al escribir
   form.querySelectorAll('input, textarea').forEach(input => {
     input.addEventListener('input', function () {
       if (this.value.trim()) {
@@ -95,7 +86,6 @@ document.querySelectorAll('form').forEach(form => {
   });
 });
 
-// Acordeón para FAQ
 document.querySelectorAll('.faq article').forEach(article => {
   const title = article.querySelector('h4');
   if (title) {
@@ -124,21 +114,18 @@ document.querySelectorAll('.faq article').forEach(article => {
   }
 });
 
-// FAQ Accordion functionality
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
   const question = item.querySelector('.faq-question');
   
   question.addEventListener('click', function() {
-    // Cerrar todos los demás items
     faqItems.forEach(otherItem => {
       if (otherItem !== item && otherItem.classList.contains('active')) {
         otherItem.classList.remove('active');
       }
     });
     
-    // Toggle el item actual
     item.classList.toggle('active');
   });
 });
