@@ -1,37 +1,22 @@
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   VARIABLES Y COLORES
-========================= */
 :root {
   --bg-1: #051224;
-  /* deep navy */
   --bg-2: #001a2e;
-  /* deep teal */
   --text: #f3fbff;
-  /* bright text */
   --accent1: #00d4ff;
-  /* electric cyan */
   --accent2: #ff2d95;
-  /* vivid magenta */
   --accent3: #ffd500;
-  /* vibrant yellow */
   --muted: #f0f4f8;
   --danger: #ff4d4f;
   --card-bg: #ffffff;
   --glass: rgba(255, 255, 255, 0.04);
 }
 
-/* =========================
-   TIPOGRAFÍA Y BODY
-========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
@@ -107,9 +92,6 @@ button.large:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-   LISTAS
-========================= */
 ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -136,9 +118,6 @@ ul.custom-icons li:hover {
   background-color: #eee;
 }
 
-/* =========================
-   IMÁGENES
-========================= */
 img {
   max-width: 100%;
   height: auto;
@@ -155,9 +134,6 @@ img.bordered:hover {
   border-color: var(--accent1);
 }
 
-/* =========================
-   TABLAS
-========================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -218,9 +194,6 @@ table tr.highlight:hover {
   min-width: 600px;
 }
 
-/* =========================
-   FORMULARIOS
-========================= */
 form {
   margin: 20px 0;
 }
@@ -285,9 +258,7 @@ form.styled-form textarea:focus {
   border-color: var(--accent2);
 }
 
-/* =========================
-   CÓDIGO Y BLOCKQUOTES
-========================= */
+
 code {
   background-color: #f4f4f4;
   padding: 2px 4px;
@@ -303,9 +274,6 @@ blockquote {
   font-style: italic;
 }
 
-/* =========================
-   MENSAJES
-========================= */
 .error-message {
   color: #ff0000;
   font-weight: bold;
@@ -332,9 +300,6 @@ blockquote {
   margin-bottom: 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
@@ -417,9 +382,6 @@ header h1 {
   margin-right: 10px;
 }
 
-/* =========================
-   LOGIN PANEL
-========================= */
 .login-panel {
   position: absolute;
   top: calc(100% + 8px);
@@ -475,9 +437,6 @@ header h1 {
   color: var(--text);
 }
 
-/* =========================
-   NAVEGACIÓN
-========================= */
 nav {
   margin-top: 10px;
 }
@@ -502,7 +461,6 @@ nav a.active:hover {
   text-decoration: none;
 }
 
-/* Pestaña desplegable */
 .contenedor {
   width: 300px;
   margin: auto;
@@ -559,9 +517,6 @@ nav a.active:hover {
   background-color: #eee;
 }
 
-/* =========================
-   FOOTER
-========================= */
 footer {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
@@ -576,9 +531,6 @@ footer p {
   margin: 0;
 }
 
-/* =========================
-   CONTENEDORES
-========================= */
 .container {
   width: 80%;
   margin: auto;
@@ -599,9 +551,6 @@ section p {
   color: var(--text);
 }
 
-/* =========================
-   TARJETAS Y GRILLAS
-========================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -677,9 +626,6 @@ section p {
   gap: 8px;
 }
 
-/* =========================
-   SECCIONES PRINCIPALES
-========================= */
 .hero {
   background: linear-gradient(90deg, rgba(0, 212, 255, 0.06), rgba(255, 45, 149, 0.02));
   border-radius: 10px;
@@ -710,9 +656,6 @@ section p {
   color: var(--text);
 }
 
-/* =========================
-   SECCIÓN "POR QUÉ ELEGIRNOS"
-========================= */
 .why-us {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.03));
   padding: 2rem;
@@ -751,9 +694,6 @@ section p {
   line-height: 1.5;
 }
 
-/* =========================
-   SECCIÓN DE GARANTÍAS
-========================= */
 .guarantees {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 45, 149, 0.04));
   padding: 2rem;
@@ -795,9 +735,6 @@ section p {
   line-height: 1.5;
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
 .fade-in {
   animation: fadeIn 0.6s ease both;
 }
@@ -848,9 +785,6 @@ section p {
   }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 600px) {
   .contenedor {
     width: 100%;
@@ -932,31 +866,13 @@ section p {
   }
 }
 
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================
-   BODY / TIPOGRAFÍA GENERAL
-========================= */
 :root {
   --bg-1: #051224;
-  /* deep navy */
   --bg-2: #001a2e;
-  /* deep teal */
   --text: #f3fbff;
-  /* bright text */
   --accent1: #00d4ff;
-  /* electric cyan */
   --accent2: #ff2d95;
-  /* vivid magenta */
   --accent3: #ffd500;
-  /* vibrant yellow */
   --muted: #f0f4f8;
   --danger: #ff4d4f;
   --card-bg: #ffffff;
@@ -970,20 +886,14 @@ body {
   padding: 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
   padding: 20px 0;
-  /* keep text-align center for smaller screens */
   text-align: center;
   position: relative;
-  /* necesario para posicionar el panel de inicio de sesión */
 }
 
-/* Contenedor superior del header: marca y acciones */
 .header-top {
   position: relative;
   width: 80%;
@@ -991,10 +901,8 @@ header {
   padding: 5px 0;
   min-height: 70px;
   overflow: visible;
-  /* permitir que el botón y el panel sean visibles */
 }
 
-/* Centrar la marca (título + logo) de forma absoluta */
 .header-top .brand {
   position: absolute;
   left: 50%;
@@ -1004,23 +912,20 @@ header {
   z-index: 2;
 }
 
-/* Alinear el botón de inicio de sesión a la derecha */
 .header-top .header-actions {
   position: absolute;
   right: 12px;
-  /* dentro del contenedor para que no se corte */
   top: 50%;
   transform: translateY(-50%);
   z-index: 90;
 }
 
-/* Asegurar que el propio botón quede por encima */
+
 .btn-login {
   position: relative;
   z-index: 100;
 }
 
-/* Evitar que el h1 ocupe espacios extra */
 header h1 {
   margin: 0;
   display: inline-block;
@@ -1028,20 +933,13 @@ header h1 {
   color: #ffffff;
 }
 
-/* =========================
-   LOGO
-========================= */
 .logo {
   width: 70px;
   height: auto;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-}
 
-/* =========================
-   NAV GENERAL
-========================= */
 nav {
   margin-top: 10px;
 }
@@ -1057,9 +955,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   CONTENEDORES
-========================= */
 .container {
   width: 80%;
   margin: auto;
@@ -1080,9 +975,6 @@ section p {
   color: var(--text);
 }
 
-/* =========================
-   FOOTER
-========================= */
 footer {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
@@ -1097,20 +989,15 @@ footer p {
   margin: 0;
 }
 
-/* =========================
-   PESTAÑA DESPLEGABLE
-========================= */
+
 .contenedor {
   width: 300px;
   margin: auto;
 }
 
-/* ocultamos el checkbox */
 #toggle-menu {
   display: none;
 }
-
-/* pestaña */
 .pestaña {
   display: block;
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
@@ -1122,7 +1009,7 @@ footer p {
   text-align: center;
 }
 
-/* contenido cerrado */
+
 .contenido {
   max-height: 0;
   overflow: hidden;
@@ -1130,24 +1017,20 @@ footer p {
   background-color: #fff;
   border-radius: 0 0 6px 6px;
   pointer-events: none;
-  /* evitar interacción cuando está oculta */
   z-index: 95;
 }
 
-/* contenido abierto */
+
 #toggle-menu:checked+.pestaña+.contenido {
   max-height: 300px;
   padding: 10px 0;
   pointer-events: auto;
-  /* permitir clicks cuando está abierto */
 }
 
-/* asegurar que los enlaces dentro sean interactivos */
 .contenido nav a {
   pointer-events: auto;
 }
 
-/* nav interno */
 .contenido nav {
   display: flex;
   flex-direction: column;
@@ -1164,18 +1047,13 @@ footer p {
   background-color: #eee;
 }
 
-/* =========================
-   ELEMENTOS GENERALES
-========================= */
 h1 {
   text-align: center;
   color: var(--accent2);
-  /* vivid heading color */
 }
 
 h2 {
   color: var(--accent2);
-  /* vivid heading color */
   margin-top: 20px;
 }
 
@@ -1186,7 +1064,6 @@ p {
 
 a {
   color: var(--accent1);
-  /* bright link color */
   text-decoration: none;
 }
 
@@ -1212,9 +1089,6 @@ button:hover {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
-/* =========================
-   LISTAS
-========================= */
 ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -1224,9 +1098,6 @@ li {
   margin-bottom: 5px;
 }
 
-/* =========================
-   IMÁGENES
-========================= */
 img {
   max-width: 100%;
   height: auto;
@@ -1234,16 +1105,12 @@ img {
   margin: 10px 0;
 }
 
-/* =========================
-   TABLAS
-========================= */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
 }
 
-/* Bordes sutiles para contraste en fondo oscuro */
 table,
 th,
 td {
@@ -1267,7 +1134,6 @@ tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* Estilos específicos para la sección comparativa (Planes) */
 .comparativa table {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.04));
   border-radius: 8px;
@@ -1282,7 +1148,7 @@ tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.04);
 }
 
-/* Wrapper para manejo responsivo de tablas */
+
 .table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -1290,12 +1156,8 @@ tr:nth-child(even) {
 
 .table-wrapper table {
   min-width: 600px;
-  /* permite scroll en pantallas pequeñas */
 }
 
-/* =========================
-   FORMULARIOS
-========================= */
 form {
   margin: 20px 0;
 }
@@ -1332,9 +1194,6 @@ input[type="submit"]:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-  RESPONSIVE
-========================= */
 @media (max-width: 600px) {
   .contenedor {
     width: 100%;
@@ -1364,7 +1223,6 @@ input[type="submit"]:hover {
     text-align: center;
   }
 
-  /* En móviles apilamos el header: marca arriba y botón debajo */
   .header-top {
     position: static;
     width: 100%;
@@ -1383,7 +1241,6 @@ input[type="submit"]:hover {
   }
 }
 
-/* En pantallas grandes empujamos aún más el botón hacia la derecha */
 @media (min-width: 1000px) {
   .header-top {
     width: 85%;
@@ -1391,23 +1248,13 @@ input[type="submit"]:hover {
 
   .header-top .header-actions {
     right: 24px;
-    /* un poco más hacia la derecha pero dentro del contenedor */
   }
 
-  /* El panel se alinea con el botón en pantallas grandes */
   .login-panel {
     right: 24px;
   }
 }
 
-/* =========================
-   NUEVOS ESTILOS
-========================= */
-
-/* =========================
-   ANIMACIONES Y COMPONENTES
-========================= */
-/* Contenedor de tarjetas */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1418,7 +1265,6 @@ input[type="submit"]:hover {
 .card {
   background: #fff;
   color: #111;
-  /* texto negro dentro de tarjetas */
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -1445,7 +1291,6 @@ input[type="submit"]:hover {
   border: 1px solid #ddd;
 }
 
-/* Centrar formularios dentro de la sección de contacto */
 .contact .card,
 .contact-form {
   max-width: 600px;
@@ -1483,7 +1328,6 @@ input[type="submit"]:hover {
   gap: 8px;
 }
 
-/* Animaciones */
 .fade-in {
   animation: fadeIn .6s ease both;
 }
@@ -1534,7 +1378,6 @@ input[type="submit"]:hover {
   }
 }
 
-/* Pequeños ajustes para los headings en secciones */
 .section-title {
   display: flex;
   align-items: center;
@@ -1547,7 +1390,6 @@ input[type="submit"]:hover {
   /* texto claro */
 }
 
-/* Estilo para resaltar secciones importantes */
 .important {
   background-color: var(--accent3);
   padding: 10px;
@@ -1555,7 +1397,6 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-/* Estilo para citas */
 blockquote {
   border-left: 4px solid var(--accent2);
   /* vivid accent */
@@ -1565,7 +1406,6 @@ blockquote {
   font-style: italic;
 }
 
-/* Estilo para botones secundarios */
 button.secondary {
   background-color: #777;
 }
@@ -1574,7 +1414,6 @@ button.secondary:hover {
   background-color: #555;
 }
 
-/* Estilo para enlaces visitados */
 a:visited {
   color: var(--text);
 }
@@ -1583,7 +1422,6 @@ a:visited:hover {
   text-decoration: underline;
 }
 
-/* Estilo para listas numeradas */
 ol {
   list-style-type: decimal;
   margin-left: 20px;
@@ -1593,7 +1431,6 @@ ol li {
   margin-bottom: 5px;
 }
 
-/* Estilo para resaltar código */
 code {
   background-color: #f4f4f4;
   padding: 2px 4px;
@@ -1601,7 +1438,6 @@ code {
   border-radius: 4px;
 }
 
-/* Estilo para tablas con filas resaltadas */
 table tr.highlight {
   background-color: #ffff99;
 }
@@ -1610,7 +1446,6 @@ table tr.highlight:hover {
   background-color: #ffeb3b;
 }
 
-/* Estilo para formularios con campos requeridos */
 input[required],
 textarea[required] {
   border: 2px solid #ff0000;
@@ -1621,21 +1456,18 @@ textarea[required]:focus {
   border-color: #cc0000;
 }
 
-/* Estilo para mensajes de error */
 .error-message {
   color: #ff0000;
   font-weight: bold;
   margin-top: 5px;
 }
 
-/* Estilo para mensajes de éxito */
 .success-message {
   color: #008000;
   font-weight: bold;
   margin-top: 5px;
 }
 
-/* Estilo para secciones destacadas */
 .highlight-section {
   background-color: #e0f7fa;
   padding: 15px;
@@ -1643,7 +1475,6 @@ textarea[required]:focus {
   margin-bottom: 20px;
 }
 
-/* Estilo para botones grandes */
 button.large {
   padding: 15px 25px;
   font-size: 18px;
@@ -1654,15 +1485,11 @@ button.large:hover {
   transform: translateY(-2px);
 }
 
-/* Estilo para enlaces de navegación activos */
 nav a.active {
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* =========================
-   HEADER: LOGIN PESTAÑA Y BOTÓN
-========================= */
 header {
   position: relative;
 }
@@ -1709,7 +1536,6 @@ header {
   position: absolute;
   top: calc(100% + 8px);
   right: 12px;
-  /* alineado con el botón dentro del contenedor */
   width: 320px;
   background: linear-gradient(180deg, #ffffff, #fbfbfb);
   border-radius: 10px;
@@ -1723,14 +1549,12 @@ header {
   z-index: 80;
 }
 
-/* Panel abierto */
 .login-panel.open {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
-/* Form dentro de la pestaña */
 .login-panel h3 {
   margin-bottom: 8px;
   color: var(--accent2);
@@ -1789,7 +1613,6 @@ nav a.active:hover {
   text-decoration: none;
 }
 
-/* Estilo para imágenes con borde */
 img.bordered {
   border: 4px solid var(--accent2);
   border-radius: 8px;
@@ -1799,7 +1622,6 @@ img.bordered:hover {
   border-color: var(--accent1);
 }
 
-/* Estilo para formularios con fondo */
 form.styled-form {
   background-color: #f9f9f9;
   padding: 20px;
@@ -1818,7 +1640,6 @@ form.styled-form textarea:focus {
   border-color: var(--accent2);
 }
 
-/* Estilo para listas con iconos personalizados */
 ul.custom-icons li {
   list-style-image: url('img/custom-icon.png');
 }
@@ -1827,9 +1648,6 @@ ul.custom-icons li:hover {
   background-color: #eee;
 }
 
-/* =========================
-   SECCIÓN "POR QUÉ ELEGIRNOS"
-========================= */
 .why-us {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.03));
   padding: 2rem;
@@ -1868,9 +1686,6 @@ ul.custom-icons li:hover {
   line-height: 1.5;
 }
 
-/* =========================
-   SECCIÓN DE GARANTÍAS
-========================= */
 .guarantees {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 45, 149, 0.04));
   padding: 2rem;
@@ -1910,4 +1725,5 @@ ul.custom-icons li:hover {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.5;
+}
 }
