@@ -1,39 +1,24 @@
 @charset "UTF-8";
 
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   VARIABLES Y COLORES
-========================= */
 :root {
   --bg-1: #051224;
-  /* deep navy */
   --bg-2: #001a2e;
-  /* deep teal */
   --text: #f3fbff;
-  /* bright text */
   --accent1: #00d4ff;
-  /* electric cyan */
   --accent2: #ff2d95;
-  /* vivid magenta */
   --accent3: #ffd500;
-  /* vibrant yellow */
   --muted: #f0f4f8;
   --danger: #ff4d4f;
   --card-bg: #ffffff;
   --glass: rgba(255, 255, 255, 0.04);
 }
 
-/* =========================
-   TIPOGRAFÍA Y BODY
-========================= */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
@@ -74,9 +59,6 @@ img {
   margin: 10px 0;
 }
 
-/* =========================
-   HEADER
-========================= */
 header {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
@@ -133,9 +115,6 @@ header h1 {
   margin-right: 10px;
 }
 
-/* =========================
-   NAVEGACIÓN
-========================= */
 nav {
   margin-top: 10px;
 }
@@ -156,9 +135,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* =========================
-   CONTENEDOR GENERAL
-========================= */
 .container {
   width: 80%;
   margin: auto;
@@ -179,9 +155,6 @@ section p {
   color: var(--text);
 }
 
-/* =========================
-   FOOTER
-========================= */
 footer {
   background: linear-gradient(90deg, var(--accent2), var(--accent1));
   color: var(--text);
@@ -197,9 +170,6 @@ footer p {
   margin: 0;
 }
 
-/* =========================
-   BOTONES
-========================= */
 button {
   background-image: linear-gradient(90deg, var(--accent1) 0%, var(--accent2) 100%);
   background-size: 200% 100%;
@@ -284,9 +254,6 @@ button.secondary:hover {
   transform: translateY(0) scale(0.99);
 }
 
-/* =========================
-   TARJETAS Y COMPONENTES
-========================= */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -331,7 +298,6 @@ button.secondary:hover {
   color: #111;
 }
 
-/* Redes sociales en cards */
 .card a {
   color: var(--accent2) !important;
   font-weight: 600;
@@ -380,9 +346,6 @@ button.secondary:hover {
   line-height: 1.5;
 }
 
-/* =========================
-   LISTAS
-========================= */
 ul {
   list-style-type: disc;
   margin-left: 20px;
@@ -397,9 +360,6 @@ li {
   margin-bottom: 5px;
 }
 
-/* =========================
-   TABLAS
-========================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -429,14 +389,6 @@ tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-tr.highlight {
-  background-color: #ffff99;
-}
-
-tr.highlight:hover {
-  background-color: #ffeb3b;
-}
-
 .comparativa table {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.04));
   border-radius: 8px;
@@ -460,9 +412,6 @@ tr.highlight:hover {
   min-width: 600px;
 }
 
-/* =========================
-   FORMULARIOS
-========================= */
 form {
   margin: 20px 0;
 }
@@ -554,9 +503,6 @@ textarea[required]:focus {
   color: var(--text);
 }
 
-/* =========================
-   PANEL DE LOGIN
-========================= */
 .login-panel {
   position: absolute;
   top: calc(100% + 8px);
@@ -585,9 +531,6 @@ textarea[required]:focus {
   color: var(--accent2);
 }
 
-/* =========================
-   PESTAÑAS/TABS DESPLEGABLES
-========================= */
 .contenedor {
   width: 300px;
   margin: auto;
@@ -644,9 +587,6 @@ textarea[required]:focus {
   background-color: #eee;
 }
 
-/* =========================
-   UTILITARIOS Y ESPECIALES
-========================= */
 a {
   color: var(--accent2);
   text-decoration: none;
@@ -668,9 +608,6 @@ a:visited:hover {
   text-decoration: underline;
 }
 
-/* Links dentro de cards (styling especial) - Manejado arriba */
-
-/* Links en secciones oscuras */
 .hero a,
 .summary a,
 .testimonials a,
@@ -749,9 +686,6 @@ blockquote {
   color: var(--text);
 }
 
-/* =========================
-   SECCIONES ESPECÍFICAS
-========================= */
 .hero {
   background: linear-gradient(90deg, rgba(0, 212, 255, 0.06), rgba(255, 45, 149, 0.02));
   border-radius: 10px;
@@ -790,9 +724,6 @@ blockquote {
   color: var(--text);
 }
 
-/* =========================
-   TESTIMONIOS
-========================= */
 .testimonials {
   padding: 3rem 1rem;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, rgba(255, 45, 149, 0.02) 100%);
@@ -895,7 +826,6 @@ blockquote {
   margin-bottom: 120px;
 }
 
-/* FAQ Acordeón */
 .faq article {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(0, 212, 255, 0.02) 100%);
   border: 1px solid rgba(0, 212, 255, 0.15);
@@ -942,9 +872,6 @@ blockquote {
   transition: max-height 0.3s ease;
 }
 
-/* =========================
-   BOTONES FLOTANTES
-========================= */
 .whatsapp-button {
   position: fixed;
   right: 16px;
@@ -966,9 +893,6 @@ blockquote {
   z-index: 1000;
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
 @keyframes float {
 
   0%,
@@ -1043,9 +967,6 @@ blockquote {
   animation: pulse 0.9s ease-in-out infinite;
 }
 
-/* =========================
-   MEDIA QUERIES - TABLETS (1000px+)
-========================= */
 @media (min-width: 1000px) {
   .header-top {
     width: 85%;
@@ -1060,9 +981,6 @@ blockquote {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - MEDIANOS (máx 1024px)
-========================= */
 @media (max-width: 1024px) {
   .partners-grid .partners-container {
     grid-template-columns: repeat(2, 1fr);
@@ -1077,9 +995,6 @@ blockquote {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - TABLETS (máx 768px)
-========================= */
 @media (max-width: 768px) {
   .partners-intro {
     padding: 2.5rem 1rem;
@@ -1156,9 +1071,6 @@ blockquote {
   }
 }
 
-/* =========================
-   MEDIA QUERIES - TELÉFONOS (máx 600px)
-========================= */
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -1240,9 +1152,6 @@ blockquote {
   }
 }
 
-/* =========================
-   PARTNERS PAGE STYLES
-========================= */
 .partners-intro {
   text-align: center;
   padding: 3.5rem 1rem;
@@ -1618,8 +1527,6 @@ blockquote {
   margin-right: auto;
 }
 
-
-
 @media (max-width: 480px) {
   .partners-grid .partners-container {
     gap: 1.5rem;
@@ -1638,10 +1545,6 @@ blockquote {
     gap: 1.5rem;
   }
 }
-
-/* =========================
-  CONTACT PAGE STYLES
-========================= */
 
 .contact-section {
   padding: 2rem 1rem;
@@ -1780,9 +1683,6 @@ blockquote {
   }
 }
 
-/* =========================
-   FAQ SECTION STYLES
-========================= */
 .faq-section {
   padding: 3rem 1rem;
   max-width: 1300px;
@@ -1918,9 +1818,6 @@ blockquote {
   }
 }
 
-/* =========================
-   SECCIÓN "POR QUÉ ELEGIRNOS"
-========================= */
 .why-us {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(255, 45, 149, 0.03));
   padding: 2rem;
@@ -1959,9 +1856,6 @@ blockquote {
   line-height: 1.5;
 }
 
-/* =========================
-  SECCIÓN DE GARANTÍAS
-========================= */
 .guarantees {
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(255, 45, 149, 0.04));
   padding: 2rem;
