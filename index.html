@@ -1,15 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>SecuroServ</title>
+    <title>securoserv - Soluciones integrales en seguridad</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Securoserv - Soluciones integrales en seguridad: vigilancia, sistemas electrónicos y consultoría. Protegemos lo que más valoras.">
+    <meta name="keywords" content="Seguridad, Vigilancia, Sistemas Electrónicos, Consultoría, Protección, Servicios de Seguridad, Seguridad Empresarial, Seguridad Residencial">
+    <meta name="author" content="Francesco Depaolini">
+    <meta name="robots" content="index, follow">
 </head>
+
 <body>
-    <h1>Welcome to SecuroServ</h1>
-    <ul>
-        <li><a href="./pages/pagina1.html">Pagina 1</a></li>
-        <li><a href="./pages/nosotros.html">Nosotros</a></li>
-        <li><a href="./pages/contacto.html">Contacto</a></li>
-        <li><a href="./pages/coperamos.html">Coperamos</a></li>
-    </ul>
+    <header>
+        <div class="header-top container">
+            <div class="brand">
+                <h1>
+                    Securoserv <img src="img/logo.webp" alt="Logo Securoserv" class="logo">
+                </h1>
+            </div>
+            <div class="header-actions">
+                <button id="login-toggle" class="btn-login" aria-expanded="false" aria-controls="login-panel">Iniciar
+                    sesión</button>
+            </div>
+        </div>
+
+        <div class="contenedor">
+
+            <input type="checkbox" id="toggle-menu">
+
+            <label for="toggle-menu" class="pestaña">
+                Navegación
+            </label>
+
+            <div class="contenido">
+                <nav>
+                    <a href="./pages/servicios.html">Servicios</a>
+                    <a href="./pages/planes.html">Planes</a>
+                    <a href="./pages/nosotros.html">Quienes Somos</a>
+                    <a href="./pages/coperamos.html">Con Quién Trabajamos</a>
+                    <a href="./pages/contacto.html">Contacto</a>
+                    <a href="index.html">Principal</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <div id="login-panel" class="login-panel" aria-hidden="true">
+            <form class="login-form" action="#" method="post">
+                <h3>Inicia sesión</h3>
+                <label for="user">Usuario o correo</label>
+                <input id="user" name="user" type="email" placeholder="correo@ejemplo.com" required>
+                <label for="pass">Contraseña</label>
+                <input id="pass" name="pass" type="password" placeholder="Contraseña" required>
+                <button type="submit" class="large">Entrar</button>
+                <p class="small">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+            </form>
+        </div>
+
+    </header>
+    <main>
+        <section class="hero fade-in">
+            <h2>Bienvenido a Securoserv</h2>
+            <p>Protegemos lo que más valoras con soluciones integrales y a medida: vigilancia, sistemas electrónicos,
+                auditorías y consultoría en seguridad.</p>
+            <p style="margin-top:12px; color:var(--muted);">Qué hacemos: ofrecemos vigilancia profesional, integración
+                de sistemas electrónicos y consultoría en seguridad para empresas y hogares. <a
+                    href="./pages/pagina1.html">Más detalles</a></p>
+        </section>
+
+        <section class="summary fade-in">
+            <div class="section-title">
+                <h3>Explora nuestras secciones</h3>
+            </div>
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-icon">🛡️</div>
+                    <h4>Servicios</h4>
+                    <p>Descubre nuestros servicios de vigilancia, sistemas electrónicos y consultoría en seguridad.</p>
+                    <a href="./pages/servicios.html" class="btn-primary">Ver servicios</a>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">📋</div>
+                    <h4>Planes</h4>
+                    <p>Elije el plan que mejor se adapte a tus necesidades, desde básico hasta corporativo.</p>
+                    <a href="./pages/planes.html" class="btn-primary">Ver planes</a>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">👥</div>
+                    <h4>Quienes Somos</h4>
+                    <p>Conoce nuestro equipo y nuestra misión en el mundo de la seguridad.</p>
+                    <a href="./pages/nosotros.html" class="btn-primary">Más sobre nosotros</a>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">🤝</div>
+                    <h4>Con Quién Trabajamos</h4>
+                    <p>Explora nuestros partners y alianzas estratégicas en tecnología de seguridad.</p>
+                    <a href="./pages/coperamos.html" class="btn-primary">Ver alianzas</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us fade-in">
+            <div class="section-title">
+                <h3>¿Por qué elegirnos?</h3>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="why-us-icon">🎯</div>
+                    <h4>Experiencia probada</h4>
+                    <p>Más de 10 años protegiendo empresas y hogares con soluciones confiables.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">⚡</div>
+                    <h4>Respuesta rápida</h4>
+                    <p>Monitoreo 24/7 con alertas inmediatas y equipos especializados en emergencias.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🔒</div>
+                    <h4>Tecnología avanzada</h4>
+                    <p>Sistemas de última generación CCTV, IoT y análisis de inteligencia artificial.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">💼</div>
+                    <h4>Servicio personalizado</h4>
+                    <p>Cada cliente recibe un plan adaptado a sus necesidades específicas de seguridad.</p>
+                </div>
+            </div>
+        </section>
+            <div class="section-title">
+                <h3>Lo que dicen nuestros clientes</h3>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Securoserv transformó completamente la seguridad de nuestras instalaciones. Profesionales, puntuales y confiables."</p>
+                    <div class="testimonial-author">
+                        <strong>Juan García</strong>
+                        <span>Gerente, Empresa Logística</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente servicio al cliente. Resolvieron todas nuestras dudas y la instalación fue muy rápida."</p>
+                    <div class="testimonial-author">
+                        <strong>María Rodríguez</strong>
+                        <span>Dueña, Comercio Local</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Monitoreo 24/7 confiable. Nos sentimos seguros sabiendo que Securoserv está cuidando nuestro patrimonio."</p>
+                    <div class="testimonial-author">
+                        <strong>Carlos López</strong>
+                        <span>Propietario, Residencial</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact fade-in">
+            <div class="section-title">
+                <h3>Contacto rápido</h3>
+            </div>
+            <div class="cards">
+                <div class="card contact-card">
+                    <strong>Teléfono:</strong>
+                    <span>+54 9 11 1234 5678</span>
+                    <strong>Email:</strong>
+                    <span>contacto@securoserv.com</span>
+                    <a href="./pages/pagina4.html" class="btn-primary" style="margin-top:10px;">Ir a contacto</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            &copy; 2024 Securoserv. Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">📱
+        WhatsApp</a>
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">↑</button>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
