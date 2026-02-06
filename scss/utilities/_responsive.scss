@@ -1,6 +1,3 @@
-/* =========================
-   MIXINS RESPONSIVE
-========================= */
 
 @mixin mobile-only {
   @media (max-width: 599px) {
@@ -38,11 +35,7 @@
   }
 }
 
-/* =========================
-   MEDIA QUERIES GLOBALES
-========================= */
 
-/* MOBILE - Pantallas pequeñas (hasta 599px) */
 
     h1 {
       display: block;
@@ -146,13 +139,13 @@
   }
 }
 @media (max-width: 600px) {
-  /* ===== LOGIN PANEL ===== */
+
   .login-panel {
     position: static;
     width: 100%;
   }
 
-  /* ===== HEADER ===== */
+
   header {
     width: 100%;
     overflow: hidden;
@@ -185,7 +178,6 @@
     padding: 8px 12px;
   }
 
-  /* ===== CARDS ===== */
 
   .summary-cards {
     flex-direction: column;
@@ -201,7 +193,6 @@
     }
   }
 
-  /* ===== TABLE ===== */
   .table-wrapper {
     width: 100%;
     overflow-x: auto;
@@ -216,7 +207,7 @@
       white-space: nowrap;
     }
   }
-  /* ===== NAVEGADOR ===== */
+
   .navegador {
     font-size: 14px;
     padding: 8px 12px;
