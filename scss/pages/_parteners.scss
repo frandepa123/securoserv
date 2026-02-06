@@ -1,8 +1,7 @@
-// Partners Page Styles - Premium Design
 @use "../utilities/variables" as *;
 @use "../utilities/responsive" as *;
 
-// Animaciones sutiles
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -59,7 +58,7 @@
   }
 }
 
-// GRID DE PARTNERS TECNOLÓGICOS
+
 .partners-grid {
   padding: 3.5rem 1rem;
   background: linear-gradient(to bottom, rgba(0, 212, 255, 0.02) 0%, transparent 100%);
@@ -114,7 +113,6 @@
   overflow: hidden;
   backdrop-filter: blur(10px);
   
-  // Fondo decorativo
   &::before {
     content: '';
     position: absolute;
@@ -183,7 +181,6 @@
   }
 }
 
-// SECCIÓN EMPRESAS
 .partners-enterprise {
   padding: 3.5rem 1rem;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, rgba(255, 45, 149, 0.02) 100%);
@@ -246,8 +243,7 @@
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(8px);
-  
-  // Efecto de fondo
+
   &::before {
     content: '';
     position: absolute;
@@ -289,7 +285,6 @@
   }
 }
 
-// SECCIÓN BENEFICIOS
 .benefits {
   padding: 3.5rem 1rem;
   background: linear-gradient(to bottom, transparent 0%, rgba(0, 212, 255, 0.02) 100%);
@@ -340,8 +335,7 @@
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  
-  // Decoración de fondo
+
   &::before {
     content: '';
     position: absolute;
@@ -394,7 +388,6 @@
   }
 }
 
-// CTA FINAL
 .cta {
   padding: 3.5rem 1rem;
   background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(255, 45, 149, 0.05) 100%);
@@ -421,7 +414,6 @@
   }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
   .partners-intro {
     padding: 2.5rem 1rem;
@@ -500,4 +492,3 @@
     gap: 1.5rem;
   }
 }
-
